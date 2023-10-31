@@ -2,9 +2,27 @@ html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	background-color:#3A3B47 ;
 }
 
 ul {
 	display: flex;
-	border: 1px solid #eee;
+
+}
+
+li {
+	/* display: flex; */
+	background-color: #EEE;
+	border: 10px solid #fff;
+	list-style: none;
+	margin: 20px;
+	padding: 20px;
+}
+
+li li {
+	display: flex;
+	
+	border: none;
+	margin: 0px;
+	padding: 0px;
 }
