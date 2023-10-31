@@ -2,16 +2,18 @@ html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color:#fff;
 	background-color:#3A3B47 ;
 }
 
 ul {
 	display: flex;
-
+	flex-wrap: wrap;
 }
 
 li {
 	/* display: flex; */
+	color: #111;
 	background-color: #EEE;
 	border: 15px solid #fff;
 	list-style: none;
