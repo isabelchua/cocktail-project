@@ -9,7 +9,6 @@ function App() {
 				{cocktailData.map((cocktail, index) => (
 					<li key={index}>
 						<h2>{cocktail.name}</h2>
-						<p>Category: {cocktail.category}</p>
 						<p>Glass: {cocktail.glass}</p>
 						<p>Ingredients:</p>
 						<ul>
