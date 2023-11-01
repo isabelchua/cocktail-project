@@ -6,6 +6,10 @@ html, body {
 	background-color:#3A3B47 ;
 }
 
+h1 {
+	text-align: center;
+}
+
 ul {
 	display: flex;
 	flex-wrap: wrap;
