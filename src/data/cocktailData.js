@@ -35,7 +35,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Negroni",
 		colors: "#ED0200",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "Before Dinner Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 3, ingredient: "Gin" },
@@ -77,7 +77,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Old Fashioned",
 		colors: ["#E74A03", "#F1A507"],
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "Before Dinner Cocktail",
 		ingredients: [
 			{
@@ -209,7 +209,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Pisco Sour",
 		colors: "#B5AB90",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "All Day Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 4.5, ingredient: "Pisco" },
@@ -306,7 +306,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Whiskey Sour",
 		colors: "#F3CA69",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "Before Dinner Cocktail",
 		ingredients: [
 			{
@@ -604,7 +604,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Rusty Nail",
 		colors: "#BD4200",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "After Dinner Cocktail",
 		ingredients: [
 			{
@@ -684,7 +684,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Godmother",
 		colors: "#C3660B",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		ingredients: [
 			{ unit: "cl", amount: 3.5, ingredient: "Vodka" },
 			{ unit: "cl", amount: 3.5, ingredient: "DiSaronno" }
@@ -696,7 +696,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Spritz Veneziano",
 		colors: "#DA1903",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "Sparkling Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 6, ingredient: "Prosecco" },
@@ -711,7 +711,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Bramble",
 		colors: ["#3B0005", "#C00834", "#eaafb5"],
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "All Day Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 4, ingredient: "Gin" },
@@ -783,7 +783,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Black Russian",
 		colors: ["#EDE4DB", "#BA4D00", "#52180F"],
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "After Dinner Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 5, ingredient: "Vodka" },
@@ -945,7 +945,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Sazerac",
 		colors: "#C98502",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "After Dinner Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 5, ingredient: "Cognac" },
@@ -961,7 +961,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Americano",
 		colors: ["#ED120A", "#FAC25B"],
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "Before Dinner Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 3, ingredient: "Campari" },
@@ -1010,7 +1010,7 @@ export const cocktailData = [
 		iba: true,
 		name: "French Connection",
 		colors: "#EF7405",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		ingredients: [
 			{ unit: "cl", amount: 3.5, ingredient: "Cognac" },
 			{ unit: "cl", amount: 3.5, ingredient: "DiSaronno" }
@@ -1273,7 +1273,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Godfather",
 		colors: "#B77F27",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		ingredients: [
 			{
 				unit: "cl",
@@ -1372,7 +1372,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Caipirinha",
 		colors: ["#4A8C03", "#e7ea96", "#f3f9ed"],
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "All Day Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 5, ingredient: "Cachaca" },
@@ -1469,7 +1469,7 @@ export const cocktailData = [
 		iba: false,
 		name: "White Russian",
 		colors: "#BBA69B",
-		glass: "old-fashioned",
+		glass: "oldFashion",
 		category: "All Day Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 5, ingredient: "Vodka" },
