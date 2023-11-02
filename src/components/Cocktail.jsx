@@ -15,7 +15,7 @@ function Cocktail() {
 	return (
 		<ul>
 			{cocktailData.map((cocktail, index) => (
-				<li key={index}>
+				<li key={index} className="card">
 					<h2>{cocktail.name}</h2>
 
 					<h4>Ingredients:</h4>
@@ -33,7 +33,7 @@ function Cocktail() {
 					<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
 					{cocktail.garnish}
 
-					<p className="glass">
+					<div className="glass">
 						{" "}
 						{/* <img src={"./../assets/icons/" + cocktail.glass + ".svg"} /> */}
 						{/* <img src={highballImage} alt="Highball Icon" /> */}
@@ -41,7 +41,7 @@ function Cocktail() {
 							src={glassImages[cocktail.glass]}
 							alt={`${cocktail.glass} Icon`}
 						/>
-					</p>
+					</div>
 				</li>
 			))}
 		</ul>
