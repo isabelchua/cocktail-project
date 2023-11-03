@@ -3,12 +3,20 @@ import highballImage from "./../assets/icons/highball.svg";
 import margaritaImage from "./../assets/icons/margarita.svg";
 import martiniImage from "./../assets/icons/martini.svg";
 import oldFashionedImage from "./../assets/icons/oldFashion.svg";
+import hurricaneImage from "./../assets/icons/hurricane.svg";
+import champagnefluteImage from "./../assets/icons/champagneflute.svg";
+import shotglassImage from "./../assets/icons/shotglass.svg";
+import hotdrinkImage from "./../assets/icons/hotdrink.svg";
 
 const glassImages = {
 	highball: highballImage,
 	margarita: margaritaImage,
 	martini: martiniImage,
-	oldFashion: oldFashionedImage
+	oldFashion: oldFashionedImage,
+	hurricane: hurricaneImage,
+	champagneflute: champagnefluteImage,
+	shotglass: shotglassImage,
+	hotdrink: hotdrinkImage
 };
 
 function Cocktail() {

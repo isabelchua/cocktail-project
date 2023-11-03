@@ -292,7 +292,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Mimosa",
 		colors: "#EBC04D",
-		glass: "champagne-flute",
+		glass: "champagneflute",
 		category: "Sparkling Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 7.5, ingredient: "Champagne" },
@@ -466,7 +466,7 @@ export const cocktailData = [
 		iba: true,
 		name: "French 75",
 		colors: ["#E9CE8E"],
-		glass: "champagne-tulip",
+		glass: "champagneflute",
 		category: "Sparkling Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 3, ingredient: "Gin" },
@@ -530,7 +530,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Bellini",
 		colors: ["#F89E64"],
-		glass: "champagne-flute",
+		glass: "champagneflute",
 		category: "Sparkling Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 10, ingredient: "Prosecco" },
@@ -623,7 +623,7 @@ export const cocktailData = [
 		iba: true,
 		name: "B-52",
 		colors: ["#F39F00", "#E7D3B3", "#401110"],
-		glass: "shot",
+		glass: "shotglass",
 		category: "After Dinner Cocktail",
 		ingredients: [
 			{
@@ -920,7 +920,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Irish Coffee",
 		colors: ["#E6D9D1", "#603309", "#1E0A05"],
-		glass: "hot-drink",
+		glass: "hotdrink",
 		category: "Hot Drink",
 		ingredients: [
 			{
@@ -1060,7 +1060,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Kir",
 		colors: "#F73D29",
-		glass: "white-wine",
+		glass: "champagneflute",
 		category: "Before Dinner Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 9, ingredient: "Dry White Wine" },
@@ -1150,7 +1150,7 @@ export const cocktailData = [
 		iba: true,
 		name: "Champagne Cocktail",
 		colors: ["#efde8b"],
-		glass: "champagne-flute",
+		glass: "champagneflute",
 		category: "Sparkling Cocktail",
 		ingredients: [
 			{ unit: "cl", amount: 9, ingredient: "Champagne" },
