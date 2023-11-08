@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 export const Search = ({ onSearch }) => {
@@ -12,8 +11,6 @@ export const Search = ({ onSearch }) => {
 
 	return (
 		<div>
-			{/* <input></input>
-			<button>Search </button> */}
 			<input
 				type="text"
 				placeholder="Search cocktails"

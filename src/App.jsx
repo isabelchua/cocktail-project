@@ -17,18 +17,10 @@ function App() {
 			<div className="header">
 				<h1>List of Cocktails</h1>
 				<Search onSearch={handleSearch} />
-				{/* <input
-					type="text"
-					placeholder="Search cocktails"
-					value={searchTerm}
-					onChange={handleInputChange}
-				/> */}
 			</div>
 			<div className="banner">
 				<img src={banner} />
 			</div>
-			{/* <Cocktail filteredCocktails={filteredCocktails} /> */}
-
 			<Cocktail cocktails={cocktailData} searchTerm={searchTerm} />
 		</div>
 	);
