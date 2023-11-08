@@ -1,4 +1,3 @@
-import { cocktailData } from "./../data/cocktailData";
 import highballImage from "./../assets/icons/highball.svg";
 import margaritaImage from "./../assets/icons/margarita.svg";
 import martiniImage from "./../assets/icons/martini.svg";
@@ -20,9 +19,38 @@ const glassImages = {
 };
 
 const Cocktail = ({ cocktails, searchTerm }) => {
-	const filteredCocktails = cocktails.filter(cocktail =>
-		cocktail.name.toLowerCase().includes(searchTerm.toLowerCase())
-	);
+	const filteredCocktails = cocktails.filter(cocktail => {
+		const searchTermLower = searchTerm.toLowerCase();
+
+		for (const key in cocktail) {
+			if (Object.prototype.hasOwnProperty.call(cocktail, key)) {
+				const value = cocktail[key];
+
+				if (
+					value &&
+					typeof value === "string" &&
+					value.toLowerCase().includes(searchTermLower)
+				) {
+					return true;
+				}
+
+				if (Array.isArray(value) && key === "ingredients") {
+					for (const ingredient of value) {
+						if (
+							ingredient.ingredient &&
+							ingredient.ingredient
+								.toLowerCase()
+								.includes(searchTermLower)
+						) {
+							return true;
+						}
+					}
+				}
+			}
+		}
+
+		return false;
+	});
 
 	return (
 		<ul>

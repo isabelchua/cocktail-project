@@ -211,7 +211,8 @@ export const cocktailData = [
 			{ unit: "cl", amount: 3, ingredient: "Grapefruit juice" }
 		],
 		garnish: "Lime wedge",
-		preparation: "Build all ingredients in a rock glass filled with ice."
+		preparation: "Build all ingredients in a rock glass filled with ice.",
+		strength: "light"
 	},
 	{
 		iba: true,
@@ -260,7 +261,9 @@ export const cocktailData = [
 		],
 		garnish: "Lemon twist",
 		preparation:
-			"Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw."
+			"Add all ingredients into highball glass filled with ice. Stir gently. Serve with straw.",
+			
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -309,6 +312,9 @@ export const cocktailData = [
 		garnish: "Optional orange twist",
 		preparation:
 			"Pour orange juice into flute and gently pour Champagne. Stir gently. Note: Buck's Fizz is a very similar cocktail but made of two parts champagne to one part orange juice."
+			,
+			flavor: "soda, frizz",
+			strength: "light"
 	},
 	{
 		iba: true,
@@ -334,7 +340,9 @@ export const cocktailData = [
 		],
 		garnish: "Half an orange slice and cherry",
 		preparation:
-			"(Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice."
+			"(Optional: if used shake little harder to foam up the egg white). Pour all ingredients into cocktail shaker filled with ice. Shake. Strain into cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice.",
+			flavor: "sour",
+			strength: "medium"
 	},
 	{
 		iba: true,
@@ -361,7 +369,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 1, ingredient: "Lime juice" }
 		],
 		garnish: "Lime wedge",
-		preparation: "Build all ingredients in a highball glass filled with ice."
+		preparation: "Build all ingredients in a highball glass filled with ice.",
+		flavor: "soda",
+		strength: "light"
 	},
 	{
 		iba: true,
@@ -553,7 +563,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 5, ingredient: "Peach puree" }
 		],
 		preparation:
-			"Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)"
+			"Pour peach puree into chilled glass and add sparkling wine. Stir gently. Variations: Puccini (fresh mandarin juice), Rossini (fresh strawberry puree), Tintoretto (fresh pomegranate juice)",
+			flavor: "frizz, soda",
+			strength: "light"
 	},
 	{
 		iba: true,
@@ -854,7 +866,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 1, ingredient: "Lime juice" }
 		],
 		garnish: "Pineapple spear, mint leaves and lime wedge",
-		preparation: "Shake and strain into highball glass. Serve with straw."
+		preparation: "Shake and strain into highball glass. Serve with straw.",
+				flavor: "fruity",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -980,6 +994,8 @@ export const cocktailData = [
 		garnish: "Lemon twist",
 		preparation:
 			"Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Note: The original recipe changed after the American Civil War, rye whiskey substituted cognac as it became hard to obtain."
+			flavor: "boozy",
+			strength: "strong"
 	},
 	{
 		iba: true,
@@ -1190,7 +1206,9 @@ export const cocktailData = [
 		],
 		garnish: "Orange slice and a cherry",
 		preparation:
-			"Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne."
+			"Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by pouring gently chilled champagne.",
+			flavor: "soda, frizz",
+			strength: "light"
 	},
 	{
 		iba: true,
