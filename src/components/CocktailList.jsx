@@ -6,6 +6,7 @@ import hurricaneImage from "./../assets/icons/hurricane.svg";
 import champagnefluteImage from "./../assets/icons/champagneflute.svg";
 import shotglassImage from "./../assets/icons/shotglass.svg";
 import hotdrinkImage from "./../assets/icons/hotdrink.svg";
+import { Link } from "react-router-dom";
 
 const glassImages = {
 	highball: highballImage,
@@ -18,7 +19,7 @@ const glassImages = {
 	hotdrink: hotdrinkImage
 };
 
-const Cocktail = ({ cocktails, searchTerm }) => {
+const CocktailList = ({ cocktails, searchTerm }) => {
 	const filteredCocktails = cocktails.filter(cocktail => {
 		const searchTermLower = searchTerm.toLowerCase();
 
@@ -77,6 +78,10 @@ const Cocktail = ({ cocktails, searchTerm }) => {
 					<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
 					{cocktail.garnish}
 
+					<u>
+						<Link to={`/cocktail/${cocktail.name}`}>learn more</Link>
+					</u>
+
 					<div className="glass">
 						<img
 							src={glassImages[cocktail.glass]}
@@ -89,4 +94,4 @@ const Cocktail = ({ cocktails, searchTerm }) => {
 	);
 };
 
-export default Cocktail;
+export default CocktailList;
