@@ -1,15 +1,58 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { getJson } from "serpapi";
 
 const CocktailPage = ({ cocktails }) => {
 	const { name } = useParams();
-	const cocktail = cocktails.find(cocktail => cocktail.name === name);
+	let cocktail = cocktails.find(c => c.name === name);
+
+	const [query, setQuery] = useState(cocktail ? cocktail.name : "");
+	const [images, setImages] = useState([]);
+
+	const KEY = process.env.REACT_APP_IMAGE_KEY;
+
+	const handleSearch = async () => {
+		try {
+			const cx = "google_images";
+			const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${KEY}&cx=${cx}&searchType=image`;
+
+			const response = await axios.get(apiUrl);
+			setImages(response.data.items);
+		} catch (error) {
+			console.error("Error fetching images:", error);
+		}
+		// };
+	};
+
+	useEffect(() => {
+		getJson(
+			{
+				q: searchTerm,
+				engine: "google_images",
+				ijn: "0",
+				api_key: KEY
+			},
+			json => {
+				setImages(json["images_results"]);
+			}
+		);
+	}, [searchTerm]);
+
+	// useEffect(() => {
+	// 	if (cocktail) {
+	// 		setQuery(cocktail.name);
+	// 		handleSearch(); // Trigger search when the component mounts
+	// 	}
+	// }, [cocktail]);
 
 	if (!cocktail) {
 		return <div>Cocktail not found</div>;
 	}
 
 	return (
-		<div>
+		<div className="cocktail-page">
 			<h2>{cocktail.name}</h2>
 			<ul>
 				{cocktail.ingredients.map((ingredient, i) => (
@@ -23,6 +66,14 @@ const CocktailPage = ({ cocktails }) => {
 			{cocktail.preparation}
 			<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
 			{cocktail.garnish}
+
+			<div>
+				{images.map(image => (
+					<img key={image.link} src={image.link} alt={image.title} />
+				))}
+			</div>
+
+			<Link to={`/`}>Back to cocktail list</Link>
 		</div>
 	);
 };

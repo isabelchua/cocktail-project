@@ -58,13 +58,13 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 	);
 
 	return (
-		<ul>
+		<ul className="cocktail-list">
 			{sortedCocktails.map((cocktail, index) => (
 				<li key={index} className="card">
 					<h2>{cocktail.name}</h2>
 
 					<h4>Ingredients:</h4>
-					<ul>
+					<ul className="ingredients">
 						{cocktail.ingredients.map((ingredient, i) => (
 							<li key={i}>
 								{ingredient.amount} {ingredient.unit}{" "}

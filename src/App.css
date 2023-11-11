@@ -40,7 +40,7 @@ h4 {
 	padding: 12px 0px 5px;
 }
 
-ul {
+.cocktail-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -67,11 +67,10 @@ li {
 	position: relative;
 }
 
-li ul {
+.ingredients {
 	flex-direction: column;
 	padding-left: 10px;
 	/* align-content: flex-start; */
-
 }
 
 li ul li {
@@ -97,3 +96,8 @@ li ul li {
 	right: 20px;
 }
 
+
+.cocktail-page {
+	width: 1000px;
+	margin: 0 auto;
+}
