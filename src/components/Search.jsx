@@ -11,6 +11,7 @@ export const Search = ({ onSearch }) => {
 
 	return (
 		<div>
+			Search
 			<input
 				type="text"
 				placeholder="Search cocktails"

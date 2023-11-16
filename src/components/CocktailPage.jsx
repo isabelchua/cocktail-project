@@ -11,34 +11,59 @@ const CocktailPage = ({ cocktails }) => {
 	const [query, setQuery] = useState(cocktail ? cocktail.name : "");
 	const [images, setImages] = useState([]);
 
-	const KEY = process.env.REACT_APP_IMAGE_KEY;
+	const KEY = import.meta.env.VITE_REACT_APP_IMAGE_KEY;
 
 	const handleSearch = async () => {
-		try {
-			const cx = "google_images";
-			const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${KEY}&cx=${cx}&searchType=image`;
+		// try {
+		// 	// const cx = "google_images";
+		// 	const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${query}&key=${KEY}&searchType=image`;
 
-			const response = await axios.get(apiUrl);
-			setImages(response.data.items);
+		// 	const response = await axios.get(apiUrl);
+		// 	setImages(response.data.items);
+		// } catch (error) {
+		// 	console.error("Error fetching images:", error);
+		// 	console.error(
+		// 		"Complete error object:",
+		// 		error.response || error.request || error.message
+		// 	);
+		// }
+
+		try {
+			const response = await fetch(
+				`https://serpapi.com/search.json?q=Coffee&hl=en&gl=us&engine=google_images&api_key=${KEY}`
+			);
+
+			if (!response.ok) {
+				throw new Error("Failed to fetch data");
+			}
+
+			const json = await response.json();
+			setImages(json.images_results);
 		} catch (error) {
 			console.error("Error fetching images:", error);
 		}
-		// };
 	};
 
+	// useEffect(() => {
+	// 	getJson(
+	// 		{
+	// 			q: searchTerm,
+	// 			engine: "google_images",
+	// 			ijn: "0",
+	// 			api_key: KEY
+	// 		},
+	// 		json => {
+	// 			setImages(json["images_results"]);
+	// 		}
+	// 	);
+	// }, [cocktail?.name]);
+
 	useEffect(() => {
-		getJson(
-			{
-				q: searchTerm,
-				engine: "google_images",
-				ijn: "0",
-				api_key: KEY
-			},
-			json => {
-				setImages(json["images_results"]);
-			}
-		);
-	}, [searchTerm]);
+		if (cocktail) {
+			setQuery(cocktail.name);
+			handleSearch();
+		}
+	}, [cocktail?.name]);
 
 	// useEffect(() => {
 	// 	if (cocktail) {
