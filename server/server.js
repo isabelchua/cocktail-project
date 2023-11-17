@@ -3,18 +3,7 @@ const fetch = require("node-fetch").default;
 const cors = require("cors");
 require("dotenv").config();
 
-// app.use(express.json());
-
-// app.use(cors());
-
 const app = express();
-
-// const corsOptions = {
-// 	origin: "http://localhost:3001",
-// 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-// 	credentials: true,
-// 	optionsSuccessStatus: 204
-// };
 
 const { getJson } = require("serpapi");
 
