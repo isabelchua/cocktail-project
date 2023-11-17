@@ -1,32 +1,44 @@
 const express = require("express");
 const fetch = require("node-fetch").default;
-
+const cors = require("cors");
 require("dotenv").config();
 
+// app.use(express.json());
+
+// app.use(cors());
+
 const app = express();
-const port = 3001;
 
-app.use(express.json());
+// const corsOptions = {
+// 	origin: "http://localhost:3001",
+// 	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+// 	credentials: true,
+// 	optionsSuccessStatus: 204
+// };
 
-app.get("/", (req, res) => {
-	res.send("Hello, this is your server!");
+const { getJson } = require("serpapi");
+
+// Enable CORS for all routes
+app.use(cors());
+
+app.get("/api/search-images", (req, res) => {
+	const { name } = req.query + " cocktail";
+
+	getJson(
+		{
+			engine: "google_images",
+			q: name,
+			location: "United States",
+			api_key: process.env.VITE_REACT_APP_IMAGE_KEY
+		},
+		json => {
+			// console.log(json);
+			res.json(json);
+		}
+	);
 });
 
-app.get("/search", async (req, res) => {
-	const apiKey = process.env.VITE_REACT_APP_IMAGE_KEY;
-	const serpApiUrl = `https://serpapi.com/search.json?q=margarita&hl=en&gl=us&engine=google_images&api_key=${apiKey}&location=United%20States`;
-
-	try {
-		const response = await fetch(serpApiUrl);
-		const data = await response.json();
-		res.json(data);
-	} catch (error) {
-		console.error("Error proxying request:", error);
-		res.status(500).json({ error: "Internal Server Error" });
-	}
-});
-
-// Start the server
-app.listen(port, () => {
-	console.log(`Server is running at http://localhost:${port}`);
+const PORT = 3000;
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
 });
