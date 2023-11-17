@@ -6,6 +6,7 @@ import { useState } from "react";
 import { cocktailData } from "./data/cocktailData";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CocktailPage from "./components/CocktailPage";
+import { Link } from "react-router-dom";
 
 function App() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -18,7 +19,9 @@ function App() {
 		<Router>
 			<div>
 				<div className="header">
-					<h1>List of Cocktails</h1>
+					<h1>
+						<Link to={`/`}>List of Cocktails</Link>
+					</h1>
 					<Search onSearch={handleSearch} />
 				</div>
 				<div className="banner">
