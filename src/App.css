@@ -52,6 +52,12 @@ h4 {
 }
 
 li {
+
+}
+
+.card {
+	height: 500px;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	color: #111;
@@ -62,11 +68,6 @@ li {
 	padding: 20px;
 	width: 300px;
 	box-shadow: #000 20px;
-}
-
-.card {
-	height: 500px;
-	position: relative;
 }
 
 .ingredients {
@@ -102,4 +103,13 @@ li ul li {
 .cocktail-page {
 	width: 1000px;
 	margin: 0 auto;
+}
+
+a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.cocktail-details {
+	margin-bottom: 50px;
 }

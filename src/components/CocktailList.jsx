@@ -58,39 +58,44 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 	);
 
 	return (
-		<ul className="cocktail-list">
-			{sortedCocktails.map((cocktail, index) => (
-				<li key={index} className="card">
-					<h2>{cocktail.name}</h2>
+		<>
+			<div className="banner">
+				<img src={banner} />
+			</div>
+			<ul className="cocktail-list">
+				{sortedCocktails.map((cocktail, index) => (
+					<li key={index} className="card">
+						<h2>{cocktail.name}</h2>
 
-					<h4>Ingredients:</h4>
-					<ul className="ingredients">
-						{cocktail.ingredients.map((ingredient, i) => (
-							<li key={i}>
-								{ingredient.amount} {ingredient.unit}{" "}
-								{ingredient.ingredient}
-							</li>
-						))}
-					</ul>
+						<h4>Ingredients:</h4>
+						<ul className="ingredients">
+							{cocktail.ingredients.map((ingredient, i) => (
+								<li key={i}>
+									{ingredient.amount} {ingredient.unit}{" "}
+									{ingredient.ingredient}
+								</li>
+							))}
+						</ul>
 
-					<h4>Preparation: </h4>
-					{cocktail.preparation}
-					<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
-					{cocktail.garnish}
+						<h4>Preparation: </h4>
+						{cocktail.preparation}
+						<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
+						{cocktail.garnish}
 
-					<u>
-						<Link to={`/cocktail/${cocktail.name}`}>learn more</Link>
-					</u>
+						<u>
+							<Link to={`/cocktail/${cocktail.name}`}>learn more</Link>
+						</u>
 
-					<div className="glass">
-						<img
-							src={glassImages[cocktail.glass]}
-							alt={`${cocktail.glass} Icon`}
-						/>
-					</div>
-				</li>
-			))}
-		</ul>
+						<div className="glass">
+							<img
+								src={glassImages[cocktail.glass]}
+								alt={`${cocktail.glass} Icon`}
+							/>
+						</div>
+					</li>
+				))}
+			</ul>
+		</>
 	);
 };
 

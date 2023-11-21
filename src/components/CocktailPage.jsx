@@ -31,16 +31,21 @@ const CocktailPage = ({ cocktails }) => {
 
 	return (
 		<div className="cocktail-page">
-			<h2>{cocktail.name}</h2>
-			{jsonData && jsonData.images_results && (
-				<div>
+			<div className="cocktail-details">
+				<h2>{cocktail.name}</h2>
+				{jsonData && jsonData.images_results && (
 					<div>
-						<img
-							src={jsonData.images_results[0].thumbnail}
-							alt="Thumbnail"
-							style={{ width: "200px", height: "200px", margin: "5px" }}
-						/>
-						{/* {jsonData.images_results.map((result, index) => (
+						<div>
+							<img
+								src={jsonData.images_results[0].thumbnail}
+								alt="Thumbnail"
+								style={{
+									width: "200px",
+									height: "200px",
+									margin: "5px"
+								}}
+							/>
+							{/* {jsonData.images_results.map((result, index) => (
 							<img
 								key={index}
 								src={result.thumbnail}
@@ -52,27 +57,29 @@ const CocktailPage = ({ cocktails }) => {
 								}}
 							/>
 						))} */}
+						</div>
 					</div>
+				)}
+
+				<ul>
+					{cocktail.ingredients.map((ingredient, i) => (
+						<li key={i}>
+							{ingredient.amount} {ingredient.unit}{" "}
+							{ingredient.ingredient}
+						</li>
+					))}
+				</ul>
+
+				<h4>Preparation: </h4>
+				{cocktail.preparation}
+				<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
+				{cocktail.garnish}
+
+				<div>
+					{images.map(image => (
+						<img key={image.link} src={image.link} alt={image.title} />
+					))}
 				</div>
-			)}
-
-			<ul>
-				{cocktail.ingredients.map((ingredient, i) => (
-					<li key={i}>
-						{ingredient.amount} {ingredient.unit} {ingredient.ingredient}
-					</li>
-				))}
-			</ul>
-
-			<h4>Preparation: </h4>
-			{cocktail.preparation}
-			<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
-			{cocktail.garnish}
-
-			<div>
-				{images.map(image => (
-					<img key={image.link} src={image.link} alt={image.title} />
-				))}
 			</div>
 
 			<Link to={`/`}>Back to cocktail list</Link>
