@@ -59,9 +59,6 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 
 	return (
 		<>
-			<div className="banner">
-				<img src={banner} />
-			</div>
 			<ul className="cocktail-list">
 				{sortedCocktails.map((cocktail, index) => (
 					<li key={index} className="card">
