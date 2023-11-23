@@ -35,6 +35,7 @@ h1 a {
 h2 {
 	margin: 0;
 	padding: 5px 0px 5px;
+	color: #7b3d3d;
 }
 
 h4 {
@@ -49,10 +50,6 @@ h4 {
 	padding: 0;
 	/* height: 100vh;  */
 	margin: 0;
-}
-
-li {
-
 }
 
 .card {
@@ -116,4 +113,8 @@ a {
 
 small {
 	color: #97d69a
+}
+
+.learn-more {
+	margin-top: 20px;
 }

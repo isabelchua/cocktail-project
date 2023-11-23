@@ -1,9 +1,14 @@
 import { Search } from "./Search";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header({ onSearch }) {
 	const [searchTerm, setSearchTerm] = useState("");
+
+	const location = useLocation();
+
+	const isCocktailPage = location.pathname.includes("/cocktail/");
+	const shouldRenderSearch = !isCocktailPage;
 
 	const handleSearch = term => {
 		setSearchTerm(term);
@@ -13,16 +18,9 @@ function Header({ onSearch }) {
 	return (
 		<div className="header">
 			<h1>
-				<Link to={`/`}>List of Cocktails</Link>
+				<Link to={`/`}>Cocktail Project</Link>
 			</h1>
-			<div>
-				<Search onSearch={handleSearch} />
-				<small>
-					{searchTerm && "displaying search for: " + searchTerm}
-				</small>
-				<br></br>
-				<small>{searchTerm && "results found"}</small>
-			</div>
+			{shouldRenderSearch && <Search onSearch={handleSearch} />}
 		</div>
 	);
 }

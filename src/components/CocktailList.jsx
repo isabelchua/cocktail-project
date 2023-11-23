@@ -63,7 +63,6 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 				{sortedCocktails.map((cocktail, index) => (
 					<li key={index} className="card">
 						<h2>{cocktail.name}</h2>
-
 						<h4>Ingredients:</h4>
 						<ul className="ingredients">
 							{cocktail.ingredients.map((ingredient, i) => (
@@ -73,16 +72,19 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 								</li>
 							))}
 						</ul>
-
 						<h4>Preparation: </h4>
 						{cocktail.preparation}
 						<h4>{cocktail.garnish ? "Garnish: " : ""}</h4>
 						{cocktail.garnish}
-
-						<u>
-							<Link to={`/cocktail/${cocktail.name}`}>learn more</Link>
-						</u>
-
+						<h4>Flavor: </h4> {cocktail.flavor}
+						<h4>Strength: </h4> {cocktail.strength}
+						<div className="learn-more">
+							<u>
+								<Link to={`/cocktail/${cocktail.name}`}>
+									learn more
+								</Link>
+							</u>
+						</div>
 						<div className="glass">
 							<img
 								src={glassImages[cocktail.glass]}

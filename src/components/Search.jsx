@@ -18,6 +18,13 @@ export const Search = ({ onSearch }) => {
 				value={searchTerm}
 				onChange={handleInputChange}
 			/>
+			<div>
+				<small>
+					{searchTerm && "displaying search for: " + searchTerm}
+				</small>
+				<br></br>
+				<small>{searchTerm && "results found"}</small>
+			</div>
 		</div>
 	);
 };
