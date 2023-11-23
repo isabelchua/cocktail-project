@@ -17,7 +17,11 @@ function Header({ onSearch }) {
 			</h1>
 			<div>
 				<Search onSearch={handleSearch} />
-				<small>displaying search for: `{searchTerm}`</small>
+				<small>
+					{searchTerm && "displaying search for: " + searchTerm}
+				</small>
+				<br></br>
+				<small>{searchTerm && "results found"}</small>
 			</div>
 		</div>
 	);
