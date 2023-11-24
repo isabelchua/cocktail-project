@@ -16,12 +16,15 @@ function Header({ onSearch }) {
 	};
 
 	return (
-		<div className="header">
-			<h1>
-				<Link to={`/`}>Cocktail Project</Link>
-			</h1>
-			{shouldRenderSearch && <Search onSearch={handleSearch} />}
-		</div>
+		<>
+			<div className="header">
+				<h1>
+					<Link to={`/`}>Cocktail Project</Link>
+				</h1>
+				{shouldRenderSearch && <Search onSearch={handleSearch} />}
+			</div>
+			<h3>Tags</h3>
+		</>
 	);
 }
 

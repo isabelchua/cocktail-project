@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
+// import { cocktailData } from "../data/cocktailData";
 
 const CocktailPage = ({ cocktails }) => {
 	const { name } = useParams();
@@ -31,6 +32,30 @@ const CocktailPage = ({ cocktails }) => {
 		return <div>Cocktail not found</div>;
 	}
 
+	// const filteredCocktails = cocktails.filter(cocktail => {
+	// const searchTermLower = cocktail.name.toLowerCase();
+
+	const firstIngredientValue =
+		cocktail.ingredients.length > 0 ? cocktail.ingredients[0].ingredient : "";
+	console.log("ingredient:", firstIngredientValue);
+
+	const filteredCocktails = cocktails.filter(cocktail => {
+		const similarCocktails = cocktail.name.toLowerCase();
+		if (
+			firstIngredientValue.toLowerCase().includes(similarCocktails)
+			// Add other conditions for filtering based on other properties if needed
+			// For example: cocktail.name.toLowerCase().includes(searchTermLower)
+			// || cocktail.preparation.toLowerCase().includes(searchTermLower)
+		) {
+			console.log("cocktail:", cocktail.name);
+			return true;
+		}
+		return false;
+	});
+
+	// console.log("Filtered Cocktails:", filteredCocktails);
+	// console.log("name:", cocktail.name);
+
 	return (
 		<Layout>
 			<Header />
@@ -49,18 +74,6 @@ const CocktailPage = ({ cocktails }) => {
 										margin: "5px"
 									}}
 								/>
-								{/* {jsonData.images_results.map((result, index) => (
-							<img
-								key={index}
-								src={result.thumbnail}
-								alt={`Thumbnail ${index}`}
-								style={{
-									width: "100px",
-									height: "100px",
-									margin: "5px"
-								}}
-							/>
-						))} */}
 							</div>
 						</div>
 					)}
