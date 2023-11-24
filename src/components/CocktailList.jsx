@@ -79,11 +79,7 @@ const CocktailList = ({ cocktails, searchTerm }) => {
 						<h4>Flavor: </h4> {cocktail.flavor}
 						<h4>Strength: </h4> {cocktail.strength}
 						<div className="learn-more">
-							<u>
-								<Link to={`/cocktail/${cocktail.name}`}>
-									learn more
-								</Link>
-							</u>
+							<Link to={`/cocktail/${cocktail.name}`}>learn more</Link>
 						</div>
 						<div className="glass">
 							<img

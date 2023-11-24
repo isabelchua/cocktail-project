@@ -170,7 +170,9 @@ export const cocktailData = [
 		],
 		garnish: "Lemon twist",
 		preparation:
-			"Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters."
+			"Build into highball glass with ice cubes. Stir gently. If required, add dashes of Angostura bitters.",
+		flavor: "fizzy, sweet",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -199,7 +201,9 @@ export const cocktailData = [
 		],
 		garnish: "Pineapple slice and a cherry",
 		preparation:
-			"Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”."
+			"Pour all ingredients, except the bitters, into shaker filled with ice. Shake. Pour into large glass, filled with ice. Add Angostura bitters, “on top”.",
+		flavor: "sour, sweet, fruity",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -238,7 +242,9 @@ export const cocktailData = [
 			}
 		],
 		preparation:
-			"Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top."
+			"Shake and strain into a chilled champagne flute. Dash some Angostura bitters on top.",
+		flavor: "sour, sweet, boozy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -286,7 +292,9 @@ export const cocktailData = [
 				label: "Few drops of Egg White"
 			}
 		],
-		preparation: "Shake with ice cubes. Strain into cocktail glass."
+		preparation: "Shake with ice cubes. Strain into cocktail glass.",
+		flavor: "sour, sweet, boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -299,7 +307,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 3, ingredient: "Apricot brandy" },
 			{ unit: "cl", amount: 3, ingredient: "Calvados" }
 		],
-		preparation: "Shake with ice cubes. Strain into a cocktail glass."
+		preparation: "Shake with ice cubes. Strain into a cocktail glass.",
+		flavor: "citrus, sour, sweet, boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -356,7 +366,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 10, ingredient: "Orange juice" }
 		],
 		garnish: "Orange slice",
-		preparation: "Build into a highball glass filled with ice. Stir gently."
+		preparation: "Build into a highball glass filled with ice. Stir gently.",
+		flavor: "sour, sweet, fruity",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -413,7 +425,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 1, ingredient: "Egg yolk" }
 		],
 		preparation:
-			"Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg."
+			"Shake with ice cubes. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.",
+		flavor: "boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -434,7 +448,9 @@ export const cocktailData = [
 		],
 		garnish: "Lemon slice",
 		preparation:
-			"Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water."
+			"Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water.",
+		flavor: "sour, sweet, fizzy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -500,7 +516,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 6, ingredient: "Champagne" }
 		],
 		preparation:
-			"Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently."
+			"Shake with ice cubes, except for champagne. Strain into a champagne flute. Top up with champagne. Stir gently.",
+		flavor: "sour, sweet, fizzy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -514,7 +532,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 1.5, ingredient: "Triple Sec" },
 			{ unit: "cl", amount: 1.5, ingredient: "Lime juice" }
 		],
-		preparation: "Shake and strain into a chilled cocktail glass."
+		preparation: "Shake and strain into a chilled cocktail glass.",
+		flavor: "sour, sweet",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -551,7 +571,9 @@ export const cocktailData = [
 			{ amount: "1 shot", ingredient: "Crème de violette" }
 		],
 		preparation:
-			"Shake and strain into a chilled cocktail glass. The IBA recipe omits the commonly included crème de violette which gives the drink a distinctive purple color."
+			"Shake and strain into a chilled cocktail glass. The IBA recipe omits the commonly included crème de violette which gives the drink a distinctive purple color.",
+		flavor: "fruity, sour, floral",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -589,7 +611,9 @@ export const cocktailData = [
 			},
 			{ unit: "cl", amount: 3, ingredient: "Cream" }
 		],
-		preparation: "Shake with ice cubes. Strain into chilled cocktail glass."
+		preparation: "Shake with ice cubes. Strain into chilled cocktail glass.",
+		flavor: "creamy",
+		strength: "light"
 	},
 	{
 		iba: true,
@@ -629,7 +653,9 @@ export const cocktailData = [
 				label: "Simple syrup"
 			}
 		],
-		preparation: "Shake and strain into a cocktail glass."
+		preparation: "Shake and strain into a cocktail glass.",
+		flavor: "sour, sweet, boozy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -648,7 +674,9 @@ export const cocktailData = [
 		],
 		garnish: "Lemon twist",
 		preparation:
-			"Build into old-fashioned glass filled with ice. Stir gently."
+			"Build into old-fashioned glass filled with ice. Stir gently.",
+		flavor: "boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -677,7 +705,9 @@ export const cocktailData = [
 			}
 		],
 		preparation:
-			"Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate."
+			"Layer ingredients one at a time starting with Kahlúa, followed by Baileys Irish Cream and top with Grand Marnier. Flame the Grand Marnier, serve while the flame is still on, accompanied with a straw on side plate.",
+		flavor: "coffee",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -695,7 +725,9 @@ export const cocktailData = [
 			}
 		],
 		preparation:
-			"Stir in mixing glass with ice cubes. Strain into a cocktail glass."
+			"Stir in mixing glass with ice cubes. Strain into a cocktail glass.",
+		flavor: "boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -709,7 +741,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 2, ingredient: "Orange juice" },
 			{ unit: "cl", amount: 1, ingredient: "Cream" }
 		],
-		preparation: "Shake with ice cubes. Strain into chilled cocktail glass."
+		preparation: "Shake with ice cubes. Strain into chilled cocktail glass.",
+		flavor: "fruity",
+		strength: "light"
 	},
 	{
 		iba: true,
@@ -721,7 +755,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 3.5, ingredient: "DiSaronno" }
 		],
 		preparation:
-			"Build into old fashioned glass filled with ice cubes. Stir gently."
+			"Build into old fashioned glass filled with ice cubes. Stir gently.",
+		flavor: "boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -736,7 +772,9 @@ export const cocktailData = [
 		],
 		garnish: "Half an orange slice",
 		preparation:
-			"Build into an old-fashioned glass filled with ice. Top with a splash of soda water."
+			"Build into an old-fashioned glass filled with ice. Top with a splash of soda water.",
+		flavor: "fizzy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -757,7 +795,9 @@ export const cocktailData = [
 		],
 		garnish: "Lemon slice and two blackberries",
 		preparation:
-			"Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion."
+			"Build over crushed ice, in a rock glass. Stir, then pour the blackberry liqueur over the top of the drink in a circular fashion.",
+		flavor: "sour, boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -775,7 +815,9 @@ export const cocktailData = [
 			{ unit: "cl", amount: 3, ingredient: "Cream" }
 		],
 		preparation:
-			"Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg. The IBA simply refers to this drink as an 'Alexander'"
+			"Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg. The IBA simply refers to this drink as an 'Alexander'",
+		flavor: "creamy, boozy",
+		strength: "medium"
 	},
 	{
 		iba: true,
@@ -929,7 +971,9 @@ export const cocktailData = [
 			{ amount: "2 drops", ingredient: "Absinthe" },
 			{ amount: "2 drops", ingredient: "Syrup", label: "Grenadine" }
 		],
-		preparation: "Shake and strain into a chilled cocktail glass."
+		preparation: "Shake and strain into a chilled cocktail glass.",
+		flavor: "fruity, boozy",
+		strength: "strong"
 	},
 	{
 		iba: true,
@@ -984,7 +1028,9 @@ export const cocktailData = [
 			{ ingredient: "Sugar", label: "Brown sugar", amount: "1 teaspoon" }
 		],
 		preparation:
-			"Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top."
+			"Warm the Irish whiskey over a burner. Pour into the glass (for hot drink) hot coffee, and add a teaspoon of sugar. Float Cream on top.",
+		flavor: "warm, boozy",
+		strength: "medium"
 	},
 	{
 		iba: true,
