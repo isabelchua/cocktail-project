@@ -51,6 +51,8 @@ function Header({ onSearch }) {
 
 	const handleTagClick = clickedTag => {
 		setSearchTerm(clickedTag);
+		console.log(clickedTag);
+		onSearch(clickedTag);
 	};
 
 	return (
