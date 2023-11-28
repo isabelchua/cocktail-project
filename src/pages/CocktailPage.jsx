@@ -37,6 +37,7 @@ const CocktailPage = ({ cocktails }) => {
 
 	const firstIngredientValue =
 		cocktail.ingredients.length > 0 ? cocktail.ingredients[0].ingredient : "";
+
 	console.log("ingredient:", firstIngredientValue);
 
 	const filteredCocktails = cocktails.filter(cocktail => {
