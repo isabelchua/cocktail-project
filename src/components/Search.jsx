@@ -1,8 +1,6 @@
 import { useState } from "react";
 
-export const Search = ({ onSearch }) => {
-	const [searchTerm, setSearchTerm] = useState("");
-
+export const Search = ({ onSearch, setSearchTerm }) => {
 	const handleInputChange = event => {
 		const value = event.target.value;
 		setSearchTerm(value);
@@ -15,15 +13,15 @@ export const Search = ({ onSearch }) => {
 			<input
 				type="text"
 				placeholder="Search cocktails"
-				value={searchTerm}
+				// value={value}
 				onChange={handleInputChange}
 			/>
 			<div>
-				<small>
+				{/* <small>
 					{searchTerm && "displaying search for: " + searchTerm}
 				</small>
 				<br></br>
-				<small>{searchTerm && "results found"}</small>
+				<small>{searchTerm && "results found"}</small> */}
 			</div>
 		</div>
 	);

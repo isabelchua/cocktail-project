@@ -1,22 +1,8 @@
-import { Search } from "./Search";
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-// import CocktailList from "../components/CocktailList";
 import { cocktailData } from "../data/cocktailData";
+import { useState, useEffect } from "react";
 
-function Header({ onSearch }) {
-	const [searchTerm, setSearchTerm] = useState("");
+const Tags = () => {
 	const [tags, setTags] = useState([]);
-
-	const location = useLocation();
-
-	const isCocktailPage = location.pathname.includes("/cocktail/");
-	const shouldRenderSearch = !isCocktailPage;
-
-	const handleSearch = term => {
-		setSearchTerm(term);
-		onSearch(term);
-	};
 
 	useEffect(() => {
 		// Update tags when the component mounts or when the searchTerm changes
@@ -56,23 +42,15 @@ function Header({ onSearch }) {
 	};
 
 	return (
-		<>
-			<div className="header">
-				<h1>
-					<Link to={`/`}>Cocktail Project</Link>
-				</h1>
-				{shouldRenderSearch && <Search onSearch={handleSearch} />}
-				<div>
-					<h3>Top Tags</h3>
-					{tags.map(tag => (
-						<button key={tag} onClick={() => handleTagClick(tag)}>
-							{tag}
-						</button>
-					))}
-				</div>
-			</div>
-		</>
+		<div>
+			Tags
+			{tags.map(tag => (
+				<button key={tag} onClick={() => handleTagClick(tag)}>
+					{tag}
+				</button>
+			))}
+		</div>
 	);
-}
+};
 
-export default Header;
+export default Tags;
