@@ -16,7 +16,7 @@ function Home() {
 	return (
 		<Layout>
 			<Header onSearch={handleSearch} />
-			<Tags />
+			{/* <Tags /> */}
 			<div className="banner">
 				<img src={banner} />
 			</div>
