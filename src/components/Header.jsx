@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import CocktailList from "../components/CocktailList";
 import { cocktailData } from "../data/cocktailData";
+import Tags from "../components/Tags";
 
 function Header({ onSearch }) {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -55,22 +56,38 @@ function Header({ onSearch }) {
 		onSearch(clickedTag);
 	};
 
+	const handleInputChange = event => {
+		const value = event.target.value;
+		setSearchTerm(value);
+		onSearch(value);
+	};
+
 	return (
 		<>
 			<div className="header">
 				<h1>
 					<Link to={`/`}>Cocktail Project</Link>
 				</h1>
-				{shouldRenderSearch && <Search onSearch={handleSearch} />}
-				<div>
-					<h3>Top Tags</h3>
-					{tags.map(tag => (
-						<button key={tag} onClick={() => handleTagClick(tag)}>
-							{tag}
-						</button>
-					))}
-					<p>Search results for: {searchTerm}</p>
-				</div>
+				{/* {shouldRenderSearch && <Search onSearch={handleSearch} />} */}
+				<nav>Home | Blog | About </nav>
+			</div>
+			<div>
+				{/* <Search onSearch={handleSearch} /> */}
+				{/* <Tags tags={searchTerm} /> */}
+				Search
+				<input
+					type="text"
+					placeholder="Search cocktails"
+					// value={value}
+					onChange={handleInputChange}
+				/>
+				<h3>Top Tags - Header</h3>
+				{tags.map(tag => (
+					<button key={tag} onClick={() => handleTagClick(tag)}>
+						{tag}
+					</button>
+				))}
+				<p>Search results for: {searchTerm}</p>
 			</div>
 		</>
 	);
