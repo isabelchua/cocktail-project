@@ -69,29 +69,30 @@ function Header({ onSearch }) {
 					<Link to={`/`}>Cocktail Project</Link>
 				</h1>
 				{/* {shouldRenderSearch && <Search onSearch={handleSearch} />} */}
-				<nav>
-					<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
-					<Link to={`/about`}>About</Link>{" "}
-				</nav>
+
+				<div>
+					{/* <Search onSearch={handleSearch} /> */}
+					{/* <Tags tags={searchTerm} /> */}
+					Search
+					<input
+						type="text"
+						placeholder="Search cocktails"
+						// value={value}
+						onChange={handleInputChange}
+					/>
+					<h4>Top Tags</h4>
+					{tags.map(tag => (
+						<button key={tag} onClick={() => handleTagClick(tag)}>
+							{tag}
+						</button>
+					))}
+					<p>Search results for: {searchTerm}</p>
+				</div>
 			</div>
-			<div>
-				{/* <Search onSearch={handleSearch} /> */}
-				{/* <Tags tags={searchTerm} /> */}
-				Search
-				<input
-					type="text"
-					placeholder="Search cocktails"
-					// value={value}
-					onChange={handleInputChange}
-				/>
-				<h3>Top Tags - Header</h3>
-				{tags.map(tag => (
-					<button key={tag} onClick={() => handleTagClick(tag)}>
-						{tag}
-					</button>
-				))}
-				<p>Search results for: {searchTerm}</p>
-			</div>
+			<nav>
+				<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
+				<Link to={`/about`}>About</Link>{" "}
+			</nav>
 		</>
 	);
 }
