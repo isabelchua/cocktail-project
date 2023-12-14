@@ -1,7 +1,14 @@
-import React from "react";
+import Layout from "./../components/Layout";
+import Header from "./../components/Header";
 
 const BlogPage = () => {
-	return <div>BlogPage</div>;
+	return (
+		<Layout>
+			<Header />
+			<h1>Blog</h1>
+			<p>This is the Blog Page</p>
+		</Layout>
+	);
 };
 
 export default BlogPage;

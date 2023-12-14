@@ -69,7 +69,10 @@ function Header({ onSearch }) {
 					<Link to={`/`}>Cocktail Project</Link>
 				</h1>
 				{/* {shouldRenderSearch && <Search onSearch={handleSearch} />} */}
-				<nav>Home | Blog | About </nav>
+				<nav>
+					<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
+					<Link to={`/about`}>About</Link>{" "}
+				</nav>
 			</div>
 			<div>
 				{/* <Search onSearch={handleSearch} /> */}
