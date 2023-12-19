@@ -129,3 +129,12 @@ small {
 	color:#EEE;
 	padding: 10px 20px;
 }
+
+
+nav {
+	padding: 10px 40px;
+}
+
+nav a {
+	text-decoration: none;
+}
