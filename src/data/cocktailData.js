@@ -484,6 +484,31 @@ export const cocktailData = [
 	},
 	{
 		iba: true,
+		name: "The Revolver",
+		searchTerm: "martini",
+		colors: ["#463639", "#D0BFA5"],
+		glass: "martini",
+		category: "After Dinner Cocktail",
+		ingredients: [
+			{ unit: "cl", amount: 2, ingredient: "Bourbon" },
+			{
+				unit: "cl",
+				amount: 0.5,
+				ingredient: "Coffee liqueur",
+				label: "Kahlúa"
+			},
+			{
+				ingredient: "Orange Bitters",
+				amount: "2 dashes"
+			}
+		],
+		garnish: "Wide strip of orange zest",
+		preparation: "Shake and strain into a chilled cocktail glass.",
+		flavor: "boozy",
+		strength: "strong"
+	},
+	{
+		iba: true,
 		name: "Margarita",
 		colors: "#B8B781",
 		glass: "margarita",
@@ -915,6 +940,33 @@ export const cocktailData = [
 		garnish: "Pineapple spear, mint leaves and lime wedge",
 		preparation: "Shake and strain into highball glass. Serve with straw.",
 		flavor: "fruity",
+		strength: "medium"
+	},
+	{
+		iba: true,
+		name: "Rum Drink",
+		colors: "#FF3006",
+		glass: "highball",
+		category: "Longdrink",
+		ingredients: [
+			{ unit: "cl", amount: 1, ingredient: "White rum" },
+			{ unit: "cl", amount: 1, ingredient: "Dark rum" },
+			{
+				unit: "cl",
+				amount: 1,
+				ingredient: "Coffee Liquor",
+				label: "Kahlua"
+			},
+			{
+				unit: "cl",
+				amount: 1,
+				ingredient: "lemon"
+			},
+			{ unit: "cl", amount: 2, ingredient: "Orance Juice" }
+		],
+		garnish: "Slice of Lime",
+		preparation: "Shake and strain into highball glass.",
+		flavor: "coffee",
 		strength: "medium"
 	},
 	{
