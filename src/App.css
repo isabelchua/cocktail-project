@@ -5,6 +5,7 @@ html, body {
 	color:#fff;
 	background-color:#3A3B47 ;
 	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.1rem;
 }
 
 .header {
@@ -53,7 +54,7 @@ h4 {
 }
 
 .card {
-	height: 500px;
+	height: 600px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -120,17 +121,21 @@ small {
 	position:absolute;
 	bottom: 20px;
 	left: 20px;
-	background-color: #7b3d3d;
-	border-radius: 20px;
+
 }
 
 .learn-more a {
 	text-decoration: none;
 	color:#EEE;
-	padding: 10px 20px;
+	padding: 5px 20px;
+	background-color: #7b3d3d;
+	border-radius: 20px;
+	/* padding: 5px 5px; */
 }
 
-
+.learn-more a:hover {
+	background-color: #924d4d;
+}
 nav {
 	padding: 10px 40px;
 }
@@ -138,3 +143,19 @@ nav {
 nav a {
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+	html, body {
+	font-size: 1.2rem;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	.card {
+		height: 690px;
+		margin: 10px;
+		padding: 15px;
+	}
+ }

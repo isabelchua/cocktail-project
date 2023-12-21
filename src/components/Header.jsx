@@ -86,7 +86,7 @@ function Header({ onSearch }) {
 							{tag}
 						</button>
 					))}
-					<p>Search results for: {searchTerm}</p>
+					{searchTerm && <p>Search results for: {searchTerm}</p>}
 				</div>
 			</div>
 			<nav>
