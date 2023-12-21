@@ -77,22 +77,34 @@ function Header({ onSearch }) {
 					<input
 						type="text"
 						placeholder="Search cocktails"
-						// value={value}
+						value={searchTerm}
 						onChange={handleInputChange}
 					/>
-					<h4>Top Tags</h4>
-					{tags.map(tag => (
-						<button key={tag} onClick={() => handleTagClick(tag)}>
-							{tag}
-						</button>
-					))}
-					{searchTerm && <p>Search results for: {searchTerm}</p>}
+					<div>
+						{searchTerm && (
+							<small>Search results for: {searchTerm}</small>
+						)}
+					</div>
 				</div>
 			</div>
-			<nav>
-				<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
-				<Link to={`/about`}>About</Link>{" "}
-			</nav>
+			<div>
+				<nav>
+					<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
+					<Link to={`/about`}>About</Link>{" "}
+				</nav>
+				<div className="nav">
+					<div>
+						<h4>
+							Tags
+							{tags.map(tag => (
+								<button key={tag} onClick={() => handleTagClick(tag)}>
+									{tag}
+								</button>
+							))}
+						</h4>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }

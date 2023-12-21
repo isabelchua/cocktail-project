@@ -44,6 +44,11 @@ h4 {
 	padding: 12px 0px 5px;
 }
 
+input {
+	padding: 8px;
+	border-radius: 20px;
+}
+
 .cocktail-list {
 	display: flex;
 	flex-wrap: wrap;
@@ -136,7 +141,9 @@ small {
 .learn-more a:hover {
 	background-color: #924d4d;
 }
-nav {
+
+.nav {
+	display: flex;
 	padding: 10px 40px;
 }
 
