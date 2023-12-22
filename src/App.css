@@ -145,9 +145,12 @@ small {
 .nav {
 	display: flex;
 	padding: 10px 40px;
+	/* justify-content: center; */
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
-nav a {
+.nav a {
 	text-decoration: none;
 }
 

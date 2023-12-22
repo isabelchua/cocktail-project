@@ -87,12 +87,12 @@ function Header({ onSearch }) {
 					</div>
 				</div>
 			</div>
-			<div>
-				<nav>
+			<div className="nav">
+				<div>
 					<Link to={`/`}>Home</Link> | <Link to={`/blog`}>Blog</Link> |{" "}
 					<Link to={`/about`}>About</Link>{" "}
-				</nav>
-				<div className="nav">
+				</div>
+				<div>
 					<div>
 						<h4>
 							Tags
