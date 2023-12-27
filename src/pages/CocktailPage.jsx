@@ -40,6 +40,7 @@ const CocktailPage = ({ cocktails }) => {
 
 	console.log("ingredient:", firstIngredientValue);
 
+	//test
 	const filteredCocktails = cocktails.filter(cocktail => {
 		const similarCocktails = cocktail.name.toLowerCase();
 		if (
