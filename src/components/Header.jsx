@@ -62,6 +62,10 @@ function Header({ onSearch }) {
 		onSearch(value);
 	};
 
+	const handleClear = () => {
+		setSearchTerm("");
+	};
+
 	return (
 		<>
 			<div className="header">
@@ -80,6 +84,7 @@ function Header({ onSearch }) {
 						value={searchTerm}
 						onChange={handleInputChange}
 					/>
+					<button onClick={handleClear}>clear</button>
 					<div>
 						{searchTerm && (
 							<small>Search results for: {searchTerm}</small>
