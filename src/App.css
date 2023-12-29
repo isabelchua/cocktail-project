@@ -13,19 +13,47 @@ html, body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 0;
-	/* height: 100vh;  */
 	margin: 0;
 	background: url('./assets/img/banner.jpg') center/cover no-repeat;
 }
 
-.banner {
+.header-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 0;
+	z-index: 1;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0, 0, 0, 0.5); 
+ }
+
+ .nav {
+	display: flex;
+	padding: 10px 40px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	z-index: 999;
+}
+
+.nav a {
+	text-decoration: none;
+}
+
+/* .banner {
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .banner img {
 	width: 100%;
-}
+} */
 
 h1 a {
 	text-align: center;
@@ -143,17 +171,7 @@ small {
 	background-color: #924d4d;
 }
 
-.nav {
-	display: flex;
-	padding: 10px 40px;
-	/* justify-content: center; */
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
 
-.nav a {
-	text-decoration: none;
-}
 
 @media only screen and (max-width: 600px) {
 	html, body {

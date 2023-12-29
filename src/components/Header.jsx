@@ -69,26 +69,29 @@ function Header({ onSearch }) {
 	return (
 		<>
 			<div className="header">
-				<h1>
-					<Link to={`/`}>Cocktail Project</Link>
-				</h1>
-				{/* {shouldRenderSearch && <Search onSearch={handleSearch} />} */}
+				<div className="overlay"></div>
+				<div className="header-content">
+					<h1>
+						<Link to={`/`}>Cocktail Project</Link>
+					</h1>
+					{/* {shouldRenderSearch && <Search onSearch={handleSearch} />} */}
 
-				<div>
-					{/* <Search onSearch={handleSearch} /> */}
-					{/* <Tags tags={searchTerm} /> */}
-					Search
-					<input
-						type="text"
-						placeholder="Search cocktails"
-						value={searchTerm}
-						onChange={handleInputChange}
-					/>
-					<button onClick={handleClear}>clear</button>
 					<div>
-						{searchTerm && (
-							<small>Search results for: {searchTerm}</small>
-						)}
+						{/* <Search onSearch={handleSearch} /> */}
+						{/* <Tags tags={searchTerm} /> */}
+						Search
+						<input
+							type="text"
+							placeholder="Search cocktails"
+							value={searchTerm}
+							onChange={handleInputChange}
+						/>
+						<button onClick={handleClear}>clear</button>
+						<div>
+							{searchTerm && (
+								<small>Search results for: {searchTerm}</small>
+							)}
+						</div>
 					</div>
 				</div>
 			</div>
