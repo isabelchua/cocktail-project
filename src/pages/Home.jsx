@@ -3,8 +3,6 @@ import CocktailList from "../components/CocktailList";
 import Header from "../components/Header";
 import Layout from "./../components/Layout";
 import { cocktailData } from "../data/cocktailData";
-import banner from "../assets/img/banner.jpg";
-import Tags from "../components/Tags";
 // import { Search } from "./Search";
 
 function Home() {
@@ -61,9 +59,6 @@ function Home() {
 		<Layout>
 			<Header onSearch={handleSearch} />
 
-			<div className="banner">
-				<img src={banner} />
-			</div>
 			<CocktailList searchTerm={searchTerm} cocktails={cocktailData} />
 		</Layout>
 	);

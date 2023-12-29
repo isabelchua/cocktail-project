@@ -15,6 +15,7 @@ html, body {
 	padding: 0;
 	/* height: 100vh;  */
 	margin: 0;
+	background: url('./assets/img/banner.jpg') center/cover no-repeat;
 }
 
 .banner {
