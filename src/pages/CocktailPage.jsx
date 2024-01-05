@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
-// import { cocktailData } from "../data/cocktailData";
 
 const CocktailPage = ({ cocktails }) => {
 	const { name } = useParams();
@@ -32,9 +31,6 @@ const CocktailPage = ({ cocktails }) => {
 		return <div>Cocktail not found</div>;
 	}
 
-	// const filteredCocktails = cocktails.filter(cocktail => {
-	// const searchTermLower = cocktail.name.toLowerCase();
-
 	const firstIngredientValue =
 		cocktail.ingredients.length > 0 ? cocktail.ingredients[0].ingredient : "";
 
@@ -42,12 +38,7 @@ const CocktailPage = ({ cocktails }) => {
 
 	const filteredCocktails = cocktails.filter(cocktail => {
 		const similarCocktails = cocktail.name.toLowerCase();
-		if (
-			firstIngredientValue.toLowerCase().includes(similarCocktails)
-			// Add other conditions for filtering based on other properties if needed
-			// For example: cocktail.name.toLowerCase().includes(searchTermLower)
-			// || cocktail.preparation.toLowerCase().includes(searchTermLower)
-		) {
+		if (firstIngredientValue.toLowerCase().includes(similarCocktails)) {
 			console.log("cocktail:", cocktail.name);
 			return true;
 		}
