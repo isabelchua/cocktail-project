@@ -46,15 +46,6 @@ html, body {
 	text-decoration: none;
 }
 
-/* .banner {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.banner img {
-	width: 100%;
-} */
-
 h1 a {
 	text-align: center;
 	margin: 0;
@@ -118,9 +109,6 @@ li ul li {
 .glass img {
 	width: 40px;
 	height: 50px;
-	/* position: absolute;
-	right: 0px; */
-	/* object-position: right bottom; */
 }
 
 .glass {
@@ -164,7 +152,6 @@ small {
 	padding: 5px 20px;
 	background-color: #7b3d3d;
 	border-radius: 20px;
-	/* padding: 5px 5px; */
 }
 
 .learn-more a:hover {
