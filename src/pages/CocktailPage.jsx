@@ -36,14 +36,14 @@ const CocktailPage = ({ cocktails }) => {
 
 	console.log("ingredient:", firstIngredientValue);
 
-	const filteredCocktails = cocktails.filter(cocktail => {
-		const similarCocktails = cocktail.name.toLowerCase();
-		if (firstIngredientValue.toLowerCase().includes(similarCocktails)) {
-			console.log("cocktail:", cocktail.name);
-			return true;
-		}
-		return false;
-	});
+	// const filteredCocktails = cocktails.filter(cocktail => {
+	// 	const similarCocktails = cocktail.name.toLowerCase();
+	// 	if (firstIngredientValue.toLowerCase().includes(similarCocktails)) {
+	// 		console.log("cocktail:", cocktail.name);
+	// 		return true;
+	// 	}
+	// 	return false;
+	// });
 
 	// console.log("Filtered Cocktails:", filteredCocktails);
 	// console.log("name:", cocktail.name);
