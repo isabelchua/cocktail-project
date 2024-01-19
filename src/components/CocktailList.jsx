@@ -19,6 +19,8 @@ const glassImages = {
 	hotdrink: hotdrinkImage
 };
 
+// test
+
 const CocktailList = ({ cocktails, searchTerm }) => {
 	const filteredCocktails = cocktails.filter(cocktail => {
 		const searchTermLower = searchTerm.toLowerCase();
