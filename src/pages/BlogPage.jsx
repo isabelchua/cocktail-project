@@ -7,6 +7,7 @@ const BlogPage = () => {
 			<Header />
 			<h1>Blog</h1>
 			<p>This is the Blog Page</p>
+			{/* test */}
 		</Layout>
 	);
 };
